@@ -1,5 +1,14 @@
 import app from './app';
 
-app.constant('config', {
-  URL_API: process.env.HOST_URL || 'http://localhost:3000/api',
-});
+const env = process.env.NODE_ENV || 'development';
+
+const config = {
+  production: {
+    HOST_URL: 'https://gideao-k121.herokuapp.com/api',
+  },
+  development: {
+    HOST_URL: 'http://localhost:3000/api',
+  },
+};
+
+app.constant('config', config[env]);
