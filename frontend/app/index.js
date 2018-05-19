@@ -11,7 +11,6 @@ import '../node_modules/angular-toastr/dist/angular-toastr.css';
 
 import './config';
 import './routes/user';
-import './routes/home';
 import './services/request';
 import './services/message';
 import './controllers/user';

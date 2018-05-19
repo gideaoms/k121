@@ -4,7 +4,8 @@ import form from '../views/users/form.html';
 
 app.config([
   '$stateProvider',
-  function ($stateProvider) {
+  '$urlRouterProvider',
+  function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('user', {
         url: '/users',
@@ -23,5 +24,7 @@ app.config([
         url: '/new',
         template: form,
       });
+
+    $urlRouterProvider.otherwise('/users/list');
   },
 ]);
