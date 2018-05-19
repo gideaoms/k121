@@ -1,0 +1,25 @@
+{
+  "name": "k121",
+  "version": "1.0.0",
+  "description": "Projeto online:",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd ./backend && npm start",
+    "preinstall": "cd ./backend && npm i && cd ../frontend && npm i && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gideaoms/k121.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gideaoms/k121/issues"
+  },
+  "homepage": "https://github.com/gideaoms/k121#readme",
+  "engines": {
+    "node": "8.11.1",
+    "npm": "6.0.1"
+  }
+}
