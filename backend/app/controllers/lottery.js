@@ -45,6 +45,10 @@ module.exports = {
         return response.status(400).json({ error: 'Você não cadastrou nenhum usuário ainda' });
       }
 
+      if (users.length === 1) {
+        return response.status(400).json({ error: 'Você precisa adicionar no mínimo 2 usuários' });
+      }
+
       await users.reduce(async (before, user) => {
         await before;
         const friends = await getFriends();
@@ -60,7 +64,7 @@ module.exports = {
 
       sendMail(usersWithYoursFriends);
 
-      return response.json(usersWithYoursFriends);
+      return response.end();
     } catch (err) {
       return next(err);
     }
