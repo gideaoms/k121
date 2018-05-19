@@ -7,11 +7,6 @@
     "start": "cd ./backend && npm start",
     "preinstall": "cd ./backend && npm i && cd ../frontend && npm i"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "cd ./frontend && npm run build"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gideaoms/k121.git"
@@ -26,8 +21,5 @@
   "engines": {
     "node": "8.11.1",
     "npm": "6.0.1"
-  },
-  "devDependencies": {
-    "husky": "^0.14.3"
   }
 }
