@@ -1,0 +1,21 @@
+<div class="card" data-ng-controller="UserFormCtrl as user_form">
+  <h5 class="card-header">Usuário</h5>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" data-ng-model="user_form.user.name" class="form-control" placeholder="Digite o nome">
+      </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" data-ng-model="user_form.user.email" class="form-control" placeholder="Digite o e-mail">
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <button type="submit" class="btn btn-primary" data-ng-click="user_form.save()">Salvar</button>
+    <button class="btn btn-link" ui-sref="user.list">Cancelar</button>
+  </div>
+</div>
+
+

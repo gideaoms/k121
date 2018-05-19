@@ -1,0 +1,23 @@
+<div data-ng-controller="UserListCtrl as user_list">
+  <button ui-sref="user.new" class="btn btn-primary">Novo</button>
+  <button data-ng-controller="LotteryCtrl as lottery" data-ng-click="lottery.runLottery()" class="btn btn-info">Sortear</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="user in user_list.users">
+        <td>{{:: user.name }}</td>
+        <td>{{:: user.email }}</td>
+        <td>
+          <a ui-sref="user.edit({id: user._id})" class="btn btn-info">Editar</a>
+          <button data-ng-click="user_list.delete(user._id)" class="btn btn-danger">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
