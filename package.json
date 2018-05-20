@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd ./backend && npm start",
-    "preinstall": "cd ./backend && npm i && cd ../frontend && npm i",
+    "preinstall": "cd ./backend && npm i && cd ../frontend && npm i --dev",
     "postinstall": "cd ./frontend && npm run build"
   },
   "repository": {
