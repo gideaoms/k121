@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "cd ./backend && npm start",
-    "preinstall": "cd ./backend && npm i && cd ../frontend && npm i",
-    "prepush": "cd ./frontend && npm run build && git add ./public && git commit -m \"build\""
+    "frontend-install": "cd ./frontend && npm i",
+    "backend-install": "cd ./backend && npm i",
+    "preinstall": "npm run frontend-install && npm i backend-install",
+    "postinstall": "cd ./frontend && npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,5 @@
   "engines": {
     "node": "8.11.1",
     "npm": "6.0.1"
-  },
-  "devDependencies": {
-    "husky": "^0.14.3"
   }
 }
