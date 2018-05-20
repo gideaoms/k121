@@ -7,7 +7,7 @@ const config = {
     URL_API: 'http://localhost:3000/api',
   },
   production: {
-    URL_API: 'https://gideao-k121.herokuapp.com',
+    URL_API: 'https://gideao-k121.herokuapp.com/api',
   },
 };
 
